@@ -7,7 +7,7 @@ export const Navbar: React.FC = () => {
         POSTED
       </h1>
       <nav className="flex flex-col items-center font-body">
-        <button className="px-6 py-3 mb-4 border-2 border-gray-600 rounded-full bg-white shadow-md">
+        <button className="px-6 py-3 mb-4 rounded-full bg-white shadow-lg">
           🔎 Search & Explore
         </button>
         <ul className="flex flex-wrap justify-center lg:flex-row">

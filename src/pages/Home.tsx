@@ -1,5 +1,10 @@
 import React from "react";
+import { Navbar } from "../components/Navbar/Navbar";
 
 export const Home: React.FC = () => {
-  return <h1 className="text-2xl p-4">Home Page</h1>;
+  return (
+    <section className="bg-background min-h-screen w-full">
+      <Navbar />
+    </section>
+  );
 };

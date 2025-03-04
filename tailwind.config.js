@@ -7,8 +7,10 @@ module.exports = {
         body: ["Inter", "sans-serif"],
       },
       colors: {
-        background: "#FCEC63",
-        content: "#222222",
+        background: "#FAFAF9",
+        backgroundSearch: "#FCEC63",
+        content: "#111827",
+        accents: "#F59E0B",
       },
     },
   },

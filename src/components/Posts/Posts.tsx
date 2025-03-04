@@ -5,11 +5,12 @@ import { MoodBoardData, Post } from "../../types/types";
 import "../../styles/masonry.css";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useFilter } from "../../context/FilterContext";
 
 const data: MoodBoardData = mockData;
 
 export const Posts: React.FC = () => {
-  const [filterTag, setFilterTag] = useState<string | null>(null);
+  const { filterTag, setFilterTag } = useFilter();
   const navigate = useNavigate();
 
   const filteredPosts = filterTag

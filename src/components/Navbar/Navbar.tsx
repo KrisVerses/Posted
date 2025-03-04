@@ -1,30 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
+import krisversesLogo from "../../assets/imgs/KV-logo.png";
+import { motion } from "framer-motion";
 
 export const Navbar: React.FC = () => {
+  const [filterTag, setFilterTag] = useState<string | null>(null);
   return (
-    <div className="flex flex-col lg:flex-row justify-around items-center text-content">
-      <h1 className="font-heading text-7xl md:text-9xl p-4 tracking-tighter">
-        POSTED
-      </h1>
-      <nav className="flex flex-col items-center font-body">
-        <button className="px-6 py-3 mb-4 rounded-full bg-white shadow-lg">
-          🔎 Search & Explore
+    <header className="flex flex-col lg:flex-row justify-around items-center text-content py-10">
+      <div>
+        <motion.img
+          src={krisversesLogo}
+          alt="KrisVerses Logo"
+          className="max-w-full h-36 object-contain hover:scale-105 hover:shadow-md transition-all duration-300 rounded-full"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        />
+        <p className="text-sm text-gray-600 mt-4 italic font-body hover:text-gray-800 transition-all">
+          Where Art Meets Code
+        </p>
+      </div>
+      <nav className="flex flex-col items-center  font-body">
+        <button className="px-6 py-3 my-6 border-2 border-b-4 border-blue-950 rounded-full bg-white shadow-md hover:scale-105 transition-transform font-bold tracking-wide">
+          Search & Explore
         </button>
-        <ul className="flex flex-wrap justify-center lg:flex-row">
-          <li className="text-xl px-2 py-1 mb-2 bg-blue-300 hover:bg-blue-600 cursor-pointer hover:text-white border-blue-950 border-2 border-b-4 mx-4 shadow-md">
-            Art
-          </li>
-          <li className="text-xl px-2 py-1 mb-2 bg-blue-300 hover:bg-blue-600 cursor-pointer hover:text-white border-blue-950 border-2 border-b-4 mx-4 shadow-md">
-            Science
-          </li>
-          <li className="text-xl px-2 py-1 mb-2 bg-blue-300 hover:bg-blue-600 cursor-pointer hover:text-white border-blue-950 border-2 border-b-4 mx-4 shadow-md">
-            Sports
-          </li>
-          <li className="text-xl px-2 py-1 mb-2 bg-blue-300 hover:bg-blue-600 cursor-pointer hover:text-white border-blue-950 border-2 border-b-4 mx-4 shadow-md">
-            Fashion
-          </li>
-        </ul>
+        <div>
+          {["Art", "Code", "Design", "Tech", "Cybersecurity"].map((tag) => (
+            <button
+              key={tag}
+              onClick={() => setFilterTag(tag)}
+              className={`px-3 py-1 mx-2 border-2 border-b-4 border-blue-950 shadow-md ${
+                filterTag === tag
+                  ? "bg-gray-800 text-white"
+                  : "bg-accents text-gray-800"
+              } hover:bg-gray-700 hover:text-white transition-all`}
+            >
+              {tag}
+            </button>
+          ))}
+        </div>
       </nav>
-    </div>
+    </header>
   );
 };

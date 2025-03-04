@@ -1,43 +1,31 @@
 {
-  "collections": [
-    {
-      "id": "col1",
-      "name": "Cyberpunk Vibes",
-      "description": "Dark neon aesthetics",
-      "posts": ["post1", "post2", "post3"],
-      "createdAt": "2025-03-03T10:00:00Z"
-    }
-  ],
   "posts": [
     {
       "id": "post1",
-      "title": "Neon City Sketch",
-      "type": "image",
-      "content": "https://example.com/neon-city.jpg",
-      "createdAt": "2025-03-03T10:05:00Z",
-      "tags": ["cyberpunk", "art"],
-      "position": { "x": 100, "y": 100 },
-      "size": { "width": 200, "height": 200 }
+      "title": "Exploring Generative Art with Three.js",
+      "content": "In this post, I dive into creating dynamic generative art using Three.js, blending code and creativity for a modern art gallery experience...",
+      "image": "https://fiverr-res.cloudinary.com/videos/t_main1,q_auto,f_auto/rh6odk1qoouu1iqenzht/create-generative-art-or-nfts-using-p5js-and-threejs.png",
+      "date": "2025-03-01T12:00:00Z",
+      "tags": ["Art", "Code", "Design"],
+      "type": "mixed"
     },
     {
       "id": "post2",
-      "title": "Error 404 Glow",
-      "type": "text",
-      "content": "Lost in the digital haze...",
-      "createdAt": "2025-03-03T10:10:00Z",
-      "tags": ["cyberpunk", "poetry"],
-      "position": { "x": 350, "y": 150 },
-      "size": { "width": 150, "height": 100 }
+      "title": "React + TypeScript Best Practices",
+      "content": "A deep dive into building scalable React apps with TypeScript, perfect for portfolio projects and freelancing...",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThUn25wUcgwx5GAc9uSmbk6nAd0zJWJhxFCw&s",
+      "date": "2025-03-02T10:00:00Z",
+      "tags": ["Code", "Tech"],
+      "type": "text"
     },
     {
       "id": "post3",
-      "title": "Glitch Red",
-      "type": "color",
-      "content": "#FF1A1A",
-      "createdAt": "2025-03-03T10:15:00Z",
-      "tags": ["cyberpunk", "minimal"],
-      "position": { "x": 200, "y": 350 },
-      "size": { "width": 100, "height": 100 }
+      "title": "Color Theory in UI/UX Design",
+      "content": "Exploring how color impacts user experience, with a focus on minimalist palettes for modern art galleries...",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO8afOCNCz4qVk_nwLc0Jh9ek21ppmKrrIOA&s",
+      "date": "2025-03-03T14:00:00Z",
+      "tags": ["Design", "Art"],
+      "type": "color"
     }
   ]
 }

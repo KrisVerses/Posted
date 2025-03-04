@@ -1,0 +1,33 @@
+.masonry-grid {
+  display: flex;
+  margin-left: -16px; /* Negative margin to offset column padding */
+  width: auto;
+}
+
+.masonry-column {
+  padding-left: 16px; /* Padding between columns */
+  background-clip: padding-box;
+}
+
+/* Ensure posts are positioned correctly for hover */
+.masonry-column > div {
+  margin-bottom: 16px; /* Space between posts in each column */
+  position: relative; /* Ensure relative positioning for framer-motion */
+  transition: none !important; /* Avoid conflict with framer-motion transitions */
+}
+
+/* Optional: Enhance hover performance */
+.masonry-column > div:hover {
+  z-index: 10; /* Ensure hover stays on top */
+}
+
+/* Optional: Vary post heights for artistic diversity */
+.masonry-column > div:nth-child(3n + 1) .h-96 {
+  height: 400px;
+} /* Every third post taller */
+.masonry-column > div:nth-child(3n + 2) .h-96 {
+  height: 300px;
+} /* Every second post shorter */
+.masonry-column > div:nth-child(3n) .h-96 {
+  height: 350px;
+} /* Every third post medium */

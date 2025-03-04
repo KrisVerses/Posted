@@ -1,10 +1,11 @@
 import React from "react";
 import { Navbar } from "../components/Navbar/Navbar";
+import { Posts } from "../components/Posts/Posts";
 
 export const Home: React.FC = () => {
   return (
-    <section className="bg-background min-h-screen w-full">
-      <Navbar />
+    <section>
+      <Posts />
     </section>
   );
 };
